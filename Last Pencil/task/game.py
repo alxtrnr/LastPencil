@@ -81,22 +81,19 @@ def jack_bot_game_play():
     pencils are left then John(human) is declared the winner. If there are pencils left john_human_gameplay function
     is called. Game continues."""
 
-    # Generates list of losing positions based on the number_of_pencils left
-    disadvantaged_positions = [number for number in range(1, gv.number_of_pencils, 4)]
-
     # Prints a graphical representation of the number_of_pencils left
     print('|' * gv.number_of_pencils)
 
-    print("Jack's turn!")
+    print("Jack's turn:")
 
     # Checks for and follows winning strategy if in number_of_pencils left.
-    if gv.number_of_pencils - 3 in disadvantaged_positions:
+    if gv.number_of_pencils % 4 == 0:
         gv.number_of_pencils -= 3
         print('3')
-    elif gv.number_of_pencils - 2 in disadvantaged_positions:
+    elif gv.number_of_pencils % 4 == 3:
         gv.number_of_pencils -= 2
         print('2')
-    elif gv.number_of_pencils - 1 in disadvantaged_positions:
+    elif gv.number_of_pencils % 4 == 2:
         gv.number_of_pencils -= 1
         print('1')
     else:

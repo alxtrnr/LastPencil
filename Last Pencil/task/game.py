@@ -68,11 +68,11 @@ def john_human_game_play():
         gv.number_of_pencils -= int(number_of_pencils_to_be_taken_by_john)
 
         if gv.number_of_pencils < 1:
-            print(number_of_pencils_to_be_taken_by_john)
+            # print(number_of_pencils_to_be_taken_by_john)
             print('Jack won!')
             sys.exit()
         else:
-            print(number_of_pencils_to_be_taken_by_john)
+            # print(number_of_pencils_to_be_taken_by_john)
             jack_bot_game_play()
 
 
@@ -97,8 +97,8 @@ def jack_bot_game_play():
         gv.number_of_pencils -= 1
         print('1')
     else:
-        # For case when there is no winning strategy for jack_bot in current position. One pencil is taken. This is in
-        # case only one pencil is left.
+        # For case when there is no winning strategy for jack_bot in current position. One pencil is taken in case only
+        # one pencil is left.
         gv.number_of_pencils -= 1
         print('1')
 
